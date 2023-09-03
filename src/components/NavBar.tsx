@@ -1,5 +1,6 @@
 import "./NavBar.css";
 import { useState } from "react";
+import { Link } from "react-scroll/modules";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -22,10 +23,28 @@ function NavBar() {
           style={{ transform: open ? "translateX(0px)" : "" }}
         >
           <li>
-            <a>Home</a>
+            <Link
+              activeClass="active"
+              to="heroscroll"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a>Activities</a>
+            <Link
+              activeClass="active"
+              to=""
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <a>Activities</a>
+            </Link>
           </li>
           <li>
             <a>Information</a>

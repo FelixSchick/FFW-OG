@@ -14,6 +14,7 @@ nav .name {
 }
 
 nav .logo {
+    display: block;
     width: 22px;
 }
 
@@ -23,6 +24,7 @@ nav .nav-links {
     background-color: transparent;
     width: 32%;
     padding: 0;
+    z-index: 99
 }
 
 nav .nav-links a {
@@ -108,7 +110,7 @@ nav .burger input:checked ~ span:nth-of-type(3) {
     left: 5px;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 950px) {
     nav .burger {
         display: block;
     }
@@ -137,5 +139,11 @@ nav .burger input:checked ~ span:nth-of-type(3) {
     
     nav .nav-links a:hover {
         border-bottom: 0px solid #fff;
+    }
+}
+
+@media all and (max-width: 400px) {
+    nav .logo {
+        display: none;
     }
 }

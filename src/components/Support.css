@@ -1,0 +1,66 @@
+
+/* Text Styling */
+.support-text h1 {
+    font-size: 40px;
+    color: rgb(171, 37, 36);
+    text-align: center;
+}
+
+.support-text h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.support-text p {
+  text-align: center;
+  font-size: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.support-become-member {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.support-become-member button {
+    font-size: 18px;
+    color: rgb(171, 37, 36);
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .support-become-member button:focus,
+  .support-become-member button:hover {
+    color: #fff;
+  }
+  
+  .support-become-member button:focus:after,
+  .support-become-member button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .support-become-member button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(171, 37, 36);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
