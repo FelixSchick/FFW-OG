@@ -1,18 +1,32 @@
 import "./NavBar.css";
 import { useState } from "react";
-import { Link } from "react-scroll/modules";
+import { scroller } from "react-scroll/modules";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
+  let navigate = useNavigate();
+
+  function refreshPage() {
+    window.location.reload();
+  }
+
+  async function goToHomeAndScroll(element: string) {
+    await navigate("/");
+    await scroller.scrollTo(element, {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: 50,
+    });
+  }
 
   return (
     <div>
       <nav>
         <div className="logo">
-          <img
-            src="..\src\assets\og-logo.png"
-            alt="Logo der Gemeinde Oberbillig"
-          />
+          <img src="../assets/og-logo.png" alt="Logo der Gemeinde Oberbillig" />
         </div>
         <div className="name">
           {" "}
@@ -22,39 +36,48 @@ function NavBar() {
           className="nav-links"
           style={{ transform: open ? "translateX(0px)" : "" }}
         >
-          <li>
-            <Link
-              activeClass="active"
-              to="heroscroll"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
+          <li onClick={refreshPage}>
+            <RouterLink
+              to="/"
+              onClick={() => {
+                setChecked(false);
+                setOpen(false);
+              }}
             >
               <a>Home</a>
-            </Link>
+            </RouterLink>
           </li>
           <li>
-            <Link
-              activeClass="active"
-              to=""
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
+            <a
+              onClick={() => {
+                setChecked(false);
+                setOpen(false);
+                goToHomeAndScroll("fbscroll");
+              }}
             >
-              <a>Activities</a>
-            </Link>
+              Aktivitäten
+            </a>
           </li>
           <li>
-            <a>Information</a>
-          </li>
-          <li>
-            <a>Join Us</a>
+            <RouterLink
+              to="/impressum"
+              onClick={() => {
+                setChecked(false);
+                setOpen(false);
+              }}
+            >
+              <a>Impressum</a>
+            </RouterLink>
           </li>
         </ul>
         <label className="burger">
-          <input type="checkbox" id="burger" onClick={() => setOpen(!open)} />
+          <input
+            type="checkbox"
+            id="burger"
+            onClick={() => setOpen(!open)}
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+          />
           <span></span>
           <span></span>
           <span></span>

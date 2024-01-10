@@ -32,6 +32,7 @@ nav .nav-links a {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: normal;
     cursor: pointer;
+    color: #fff;
     padding: 0;
 }
 

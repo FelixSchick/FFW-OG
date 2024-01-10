@@ -22,7 +22,9 @@ function Support() {
       </div>
 
       <div className="support-become-member">
-        <button onClick={() => {}}>DOWNLOAD PDF</button>
+        <a href="../assets/Mitgliedsantrag_2020.pdf" download>
+          <button>MITGLIEDSANTRAG HERUNTERLADEN</button>
+        </a>
       </div>
     </div>
   );

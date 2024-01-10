@@ -1,17 +1,24 @@
 import "./App.css";
-import Facebook from "./components/Facebook";
+
 import Hero from "./components/Hero";
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
-import Support from "./components/Support";
+import Home from "./pages/Home";
+import Impressum from "./pages/Impressum";
 
 function App() {
   return (
     <>
-      {" "}
-      <NavBar />
-      <Hero />
-      <Support />
+      <div className="App">
+        <NavBar />
+        <Hero />
+      </div>
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/impressum" element={<Impressum />} />
+        </Routes>
+      </div>
     </>
   );
 }

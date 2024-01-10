@@ -6,6 +6,11 @@
     text-align: center;
 }
 
+.support {
+  background-color: #141414;
+  padding: 4%;
+}
+
 .support-text h2 {
   font-size: 26px;
   text-align: center;
