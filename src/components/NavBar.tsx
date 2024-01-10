@@ -26,7 +26,12 @@ function NavBar() {
     <div>
       <nav>
         <div className="logo">
-          <img src="../assets/og-logo.png" alt="Logo der Gemeinde Oberbillig" />
+          <RouterLink to="/">
+            <img
+              src="../assets/og-logo.png"
+              alt="Logo der Gemeinde Oberbillig"
+            />
+          </RouterLink>
         </div>
         <div className="name">
           {" "}
