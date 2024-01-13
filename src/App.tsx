@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Impressum from "./pages/Impressum";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/impressum" element={<Impressum />} />
         </Routes>
       </div>
+      <Footer />
     </>
   );
 }
