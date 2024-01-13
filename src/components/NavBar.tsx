@@ -64,6 +64,17 @@ function NavBar() {
             </a>
           </li>
           <li>
+            <a
+              onClick={() => {
+                setChecked(false);
+                setOpen(false);
+                goToHomeAndScroll("infoscroll");
+              }}
+            >
+              Informationen
+            </a>
+          </li>
+          <li>
             <RouterLink
               to="/impressum"
               onClick={() => {

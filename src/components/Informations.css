@@ -1,0 +1,62 @@
+.header {
+    text-align: center;
+}
+
+.info-container {
+    padding-top: 25px;
+    background-color: #141414;
+}
+
+.burnplants-container {
+    margin-top: 25px;
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.burnplants-image {
+  height: 250px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/burnplants.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  z-index: 1
+}
+
+.burnplants-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.flood-container {
+    margin-top: 25px;
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+.flood-image {
+  height: 250px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/flood.jpg);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  z-index: 1
+}
+
+.flood-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

@@ -18,17 +18,17 @@ function Facebook() {
 
   return (
     <React.Fragment>
-      <div className="activities">
+      <div className="activities" id="fbscroll">
         <h1>Aktivitäten</h1>
         <div className="fb-root"></div>
-        <div className="fb-container" id="fbscroll">
+        <div className="fb-container">
           <div id="fb-root"></div>
           <div
             className="fb-page"
             data-href="https://www.facebook.com/feuerwehr.oberbillig/"
             data-tabs="timeline"
-            data-width="400"
-            data-height="500"
+            data-width="700"
+            data-height="800"
             data-small-header="false"
             data-adapt-container-width="true"
             data-hide-cover="false"
