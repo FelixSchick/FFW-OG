@@ -74,17 +74,6 @@ function NavBar() {
               Informationen
             </a>
           </li>
-          <li>
-            <RouterLink
-              to="/impressum"
-              onClick={() => {
-                setChecked(false);
-                setOpen(false);
-              }}
-            >
-              <a>Impressum</a>
-            </RouterLink>
-          </li>
         </ul>
         <label className="burger">
           <input
