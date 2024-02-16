@@ -21,7 +21,11 @@ function Hero() {
       <div className="hero-image">
         <div className="hero-text">
           <h1>Wir sind da wenn du uns brauchst!</h1>
-          <p>24/7 356 Tage im Jahr sind wir für dich einsatzbereit!</p>
+          <p>
+            <b>24/7 {new Date().getFullYear() % 4 == 0 ? "366" : "365"} Tage</b>{" "}
+            im Jahr
+          </p>
+          <p>sind wir für dich einsatzbereit!</p>
           <button
             className="button"
             onClick={() => goToHomeAndScroll("supportScroll")}
