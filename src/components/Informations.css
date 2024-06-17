@@ -78,7 +78,7 @@
   background-size: cover;
   position: relative;
 
-  z-index: 1
+  z-index: 1;
 }
 
 .flash-flood-map-text {
@@ -88,4 +88,38 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.solid-seperator {
+  margin-top: 2px;
+  border-top: 1px solid #242424;
+  border-radius: 1px;
+}
+
+.prevent-btn {
+  margin-top: 10px;
+  border-radius: .4rem;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #fff;
+  -webkit-clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  clip-path: polygon(0 0,0 0,100% 0,100% 0,100% calc(100% - 15px),calc(100% - 15px) 100%,15px 100%,0 100%);
+  height: 50px;
+  font-size: 1.2rem;
+  line-height: 14px;
+  letter-spacing: 1.2px;
+  transition: .2s .1s;
+  background-image: linear-gradient(90deg,#1c1c1c,rgb(171, 37, 36));
+  border: 0 solid;
+  overflow: hidden;
+}
+
+.prevent-btn:hover {
+  cursor: pointer;
+  transition: all .3s ease-in;
+  padding-right: 60px;
+  padding-left: 60px;
 }

@@ -40,6 +40,14 @@ function Informations() {
             <div className="flash-flood-map-image">
               <div className="flash-flood-map-text">
                 <h2>Sturzflutkarte</h2>
+                <hr className="solid-seperator" />
+                <a
+                  href="https://www.konz.de/de/bauen-wohnen/hochwasser-starkregenvorsorge/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="prevent-btn">Vorsorge</button>
+                </a>
               </div>
             </div>
           </a>
