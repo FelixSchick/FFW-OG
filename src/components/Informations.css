@@ -63,15 +63,15 @@
 
 
 
-.flood-map-container {
+.flash-flood-map-container {
   margin-top: 25px;
   height: 250px;
   margin-bottom: 25px;
 }
 
-.flood-map-image {
+.flash-flood-map-image {
   height: 250px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/flood-map.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/flash-flood-map.jpg);
 
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@
   z-index: 1
 }
 
-.flood-map-text {
+.flash-flood-map-text {
   text-align: center;
   position: absolute;
   top: 50%;
