@@ -31,6 +31,19 @@ function Informations() {
             </div>
           </a>
         </div>
+        <div className="flood-map-container">
+          <a
+            href="https://gda-wasser.rlp-umwelt.de/GDAWasser/client/gisclient/index.html?applicationId=106722&contextId=112404"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="flood-map-image">
+              <div className="flood-map-text">
+                <h2>Sturzflutkarte</h2>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
