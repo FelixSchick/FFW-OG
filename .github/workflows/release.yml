@@ -26,7 +26,7 @@ jobs:
 
       - name: Zip website files
         run: |
-          zip -r website.zip ./path/to/your/website
+          zip -r website.zip ./dist
 
       - name: Create release
         id: create_release
