@@ -22,16 +22,18 @@ jobs:
         run: npm install
 
       - name: Run semantic-release
+        id: semantic_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
-
+        run: |
+          new_version=$(npx semantic-release --dry-run | grep -oP '(?<=Next release version: )\S+')
+          echo "new_release_version=$new_version" >> $GITHUB_ENV
+          
       - name: Build the website
         run: npm run build
 
       - name: Zip website files
-        run: |
-          zip -r website.zip ./dist
+        run: zip -r website.zip ./dist
 
       - name: Create release
         id: create_release
@@ -39,9 +41,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ steps.semantic_release.outputs.version }}
-          release_name: Release v${{ steps.semantic_release.outputs.version }}
-          body: 'Release v${{ steps.semantic_release.outputs.version }}'
+          tag_name: v${{ env.new_release_version }}
+          release_name: Release v${{ env.new_release_version }}
+          body: 'Release v${{ env.new_release_version }}'
           draft: false
           prerelease: false
 
