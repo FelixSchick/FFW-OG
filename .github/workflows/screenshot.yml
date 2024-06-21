@@ -67,8 +67,23 @@ jobs:
             })();
           "
 
-      - name: Upload screenshot
-        uses: actions/upload-artifact@v2
-        with:
-          name: screenshot
-          path: screenshot.png
+      - name: Copy screenshot to repo
+        run: |
+          mv screenshot.png ./dist/screenshot.png
+
+      - name: Update README
+        run: |
+          if grep -q '![Screenshot](dist/screenshot.png)' README.md; then
+            echo "Screenshot already exists in README.md"
+          else
+            echo '![Screenshot](dist/screenshot.png)' >> README.md
+          fi
+        shell: bash
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md dist/screenshot.png
+          git commit -m "Add/update screenshot in README"
+          git push
