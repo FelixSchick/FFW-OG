@@ -36,6 +36,7 @@ jobs:
         run: |
           npm install puppeteer
           node -e "
+            import { setTimeout } from 'node:timers/promises';
             const puppeteer = require('puppeteer');
             (async () => {
               const browser = await puppeteer.launch();
@@ -43,7 +44,7 @@ jobs:
               await page.goto('http://localhost:8080', { waitUntil: 'networkidle2' });
 
               // Extra wait time for embeds
-              await page.waitForTimeout(20000); // 20 seconds
+              await setTimeout(20000); // 20 seconds
 
               await page.evaluate(async () => {
                 await new Promise((resolve) => {
