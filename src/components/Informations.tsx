@@ -46,7 +46,7 @@ function Informations() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <button className="prevent-btn">Vorsorge</button>
+                  <button className="prevent-btn">Starkregen Vorsorge</button>
                 </a>
               </div>
             </div>

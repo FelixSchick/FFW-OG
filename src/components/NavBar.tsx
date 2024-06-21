@@ -1,7 +1,9 @@
 import "./NavBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { scroller } from "react-scroll/modules";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
+
+import ogLogoImg from "../assets/og-logo.png";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -11,6 +13,23 @@ function NavBar() {
   function refreshPage() {
     window.location.reload();
   }
+
+  const [show, setShow] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   async function goToHomeAndScroll(element: string) {
     await navigate("/");
@@ -24,13 +43,10 @@ function NavBar() {
 
   return (
     <div>
-      <nav>
+      <nav className={`navbar ${show ? "navbar--visible" : "navbar--hidden"}`}>
         <div className="logo">
           <RouterLink to="/">
-            <img
-              src="../assets/og-logo.png"
-              alt="Logo der Gemeinde Oberbillig"
-            />
+            <img src={ogLogoImg} alt="Logo der Gemeinde Oberbillig" />
           </RouterLink>
         </div>
         <div className="name">

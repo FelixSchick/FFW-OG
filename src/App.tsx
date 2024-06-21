@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         <Hero />
       </div>
-      <div className="content">
+      <div className="content" id="contentScroll">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/impressum" element={<Impressum />} />

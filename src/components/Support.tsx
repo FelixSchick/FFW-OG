@@ -10,14 +10,23 @@ function Support() {
           Die Freiwillige Feuerwehr Oberbillig engagiert sich aktiv für Ihre
           Sicherheit und den Schutz der Gemeinschaft. Sie setzt modernes
           Equipment, Schulungen und die Ausbildung des Nachwuchses ein, um immer
-          einsatzbereit zu sein. <br /> Deshalb bitten wir Sie herzlich, den im
-          Jahr 2012 gegründeten Förderverein der Freiwilligen Feuerwehr
-          Oberbillig zu unterstützen. <br /> Füllen Sie die Anmeldung aus,
-          senden Sie sie an den Förderverein oder geben Sie sie persönlich ab.
-          Der Jahres-Mitgliedsbeitrag beträgt <b>12,- €</b>, und Sie können nach
+          einsatzbereit zu sein. Deshalb bitten wir Sie herzlich, den im Jahr
+          2012 gegründeten Förderverein der Freiwilligen Feuerwehr Oberbillig zu
+          unterstützen. Füllen Sie die <b>Anmeldung</b> aus, senden Sie sie an
+          den Förderverein oder geben Sie sie persönlich ab. Der
+          Jahres-Mitgliedsbeitrag beträgt <b>12,- €</b>, und Sie können nach
           eigenem Ermessen eine einmalige Sonderspende hinzufügen. Ihre Spenden
           sind steuerlich abzugsfähig. Für weitere Informationen kontaktieren
-          Sie uns per E-Mail unter foerderverein@feuerwehr-oberbillig.de.
+          Sie uns per E-Mail unter{" "}
+          <b>
+            <a
+              className="email-support"
+              href="mailto: foerderverein@feuerwehr-oberbillig.de"
+            >
+              foerderverein@feuerwehr-oberbillig.de
+            </a>
+          </b>
+          .
         </p>
       </div>
 
