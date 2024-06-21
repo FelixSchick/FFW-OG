@@ -41,6 +41,10 @@ jobs:
               const browser = await puppeteer.launch();
               const page = await browser.newPage();
               await page.goto('http://localhost:8080', { waitUntil: 'networkidle2' });
+
+              // Extra wait time for embeds
+              await page.waitForTimeout(10000); // 10 seconds
+
               await page.evaluate(async () => {
                 await new Promise((resolve) => {
                   let totalHeight = 0;
