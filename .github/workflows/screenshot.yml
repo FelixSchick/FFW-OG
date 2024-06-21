@@ -73,8 +73,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "github-actions[bot]" -f
-          git config --global user.email "github-actions[bot]@users.noreply.github.com" -f
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md dist/screenshot.png -f
-          git commit -m "Add/update screenshot in README" -f
-          git push -f
+          git commit -m "update screenshot"
+          git push
