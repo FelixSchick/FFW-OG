@@ -29,7 +29,6 @@ function Support() {
           .
         </p>
       </div>
-
       <div className="support-become-member">
         <a href="../assets/Mitgliedsantrag_2020.pdf" download>
           <button>MITGLIEDSANTRAG HERUNTERLADEN</button>
