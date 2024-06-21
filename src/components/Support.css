@@ -19,10 +19,23 @@
 }
 
 .support-text p {
-  text-align: center;
+  text-align: justify;
   font-size: 15px;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.support-text b {
+  color: rgb(171, 37, 36);
+}
+
+.email-support {
+  color: rgb(171, 37, 36);
+}
+
+.email-support:hover {
+  color: rgb(171, 37, 36);
+  border-bottom: 1px solid rgb(171, 37, 36);
 }
 
 .support-become-member {

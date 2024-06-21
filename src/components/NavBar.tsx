@@ -1,5 +1,5 @@
 import "./NavBar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { scroller } from "react-scroll/modules";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 
@@ -11,6 +11,23 @@ function NavBar() {
   function refreshPage() {
     window.location.reload();
   }
+
+  const [show, setShow] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   async function goToHomeAndScroll(element: string) {
     await navigate("/");
@@ -24,7 +41,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav>
+      <nav className={`navbar ${show ? "navbar--visible" : "navbar--hidden"}`}>
         <div className="logo">
           <RouterLink to="/">
             <img

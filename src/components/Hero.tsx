@@ -2,6 +2,7 @@ import "./Hero.css";
 
 import { scroller } from "react-scroll/modules";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function Hero() {
   let navigate = useNavigate();
@@ -33,6 +34,15 @@ function Hero() {
             Unterstütze uns!
           </button>
         </div>
+        <Link
+          to="contentScroll"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+        >
+          <div className="arrow" />
+        </Link>
       </div>
     </div>
   );
