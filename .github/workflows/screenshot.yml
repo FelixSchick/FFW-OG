@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20' # Verwende Node.js Version 16 oder höher
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
@@ -43,7 +43,7 @@ jobs:
               await page.goto('http://localhost:8080', { waitUntil: 'networkidle2' });
 
               // Extra wait time for embeds
-              await page.waitForTimeout(10000); // 10 seconds
+              await page.waitForTimeout(20000); // 20 seconds
 
               await page.evaluate(async () => {
                 await new Promise((resolve) => {
