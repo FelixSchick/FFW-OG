@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MediaQuery from "react-responsive";
 
 import "./Facebook.css";
 
 function Facebook() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   React.useEffect(() => {
     const script = document.createElement("script");
     script.src =
@@ -17,6 +31,38 @@ function Facebook() {
     };
   }, []);
 
+  function returnFacebookEmbed() {
+    if (width >= 800) {
+      return (
+        <div
+          className="fb-page"
+          data-href="https://www.facebook.com/feuerwehr.oberbillig/"
+          data-tabs="timeline"
+          data-width="450"
+          data-height="750"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="false"
+        ></div>
+      );
+    } else {
+      return (
+        <div
+          className="fb-page"
+          data-href="https://www.facebook.com/feuerwehr.oberbillig/"
+          data-tabs="timeline"
+          data-width="300"
+          data-height="750"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="false"
+        ></div>
+      );
+    }
+  }
+
   return (
     <React.Fragment>
       <div className="activities" id="fbscroll">
@@ -24,32 +70,17 @@ function Facebook() {
         <div className="fb-root"></div>
         <div className="fb-container">
           <div id="fb-root"></div>
-          <MediaQuery minWidth={800}>
-            <div
-              className="fb-page"
-              data-href="https://www.facebook.com/feuerwehr.oberbillig/"
-              data-tabs="timeline"
-              data-width="450"
-              data-height="750"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="false"
-            ></div>
-          </MediaQuery>
-          <MediaQuery maxHeight={799}>
-            <div
-              className="fb-page"
-              data-href="https://www.facebook.com/feuerwehr.oberbillig/"
-              data-tabs="timeline"
-              data-width="300"
-              data-height="750"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="false"
-            ></div>
-          </MediaQuery>
+          <div
+            className="fb-page"
+            data-href="https://www.facebook.com/feuerwehr.oberbillig/"
+            data-tabs="timeline"
+            data-width={width - 100}
+            data-height="750"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="false"
+          ></div>
         </div>
       </div>
     </React.Fragment>
