@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MediaQuery from "react-responsive";
 
 import "./Facebook.css";
 
@@ -30,38 +29,6 @@ function Facebook() {
       document.body.removeChild(script);
     };
   }, []);
-
-  function returnFacebookEmbed() {
-    if (width >= 800) {
-      return (
-        <div
-          className="fb-page"
-          data-href="https://www.facebook.com/feuerwehr.oberbillig/"
-          data-tabs="timeline"
-          data-width="450"
-          data-height="750"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="false"
-        ></div>
-      );
-    } else {
-      return (
-        <div
-          className="fb-page"
-          data-href="https://www.facebook.com/feuerwehr.oberbillig/"
-          data-tabs="timeline"
-          data-width="300"
-          data-height="750"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="false"
-        ></div>
-      );
-    }
-  }
 
   return (
     <React.Fragment>
