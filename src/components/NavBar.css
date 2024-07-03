@@ -29,6 +29,7 @@ nav .name {
 }
 
 nav .logo {
+    padding-top: 7px;
     display: block;
     width: 22px;
 }
