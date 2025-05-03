@@ -1,33 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import "./Facebook.css";
 
 function Facebook() {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   React.useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=401715865601282&autoLogAppEvents=1";
-    script.async = true;
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
+    const loadFacebookSDK = () => {
+      const script = document.createElement("script");
+      script.src = "https://connect.facebook.net/en_US/sdk.js";
+      script.async = true;
+      script.defer = true;
+      script.onload = () => {
+        if (window.FB) {
+          window.FB.init({
+            appId: "401715865601282",
+            xfbml: true,
+            version: "v16.0",
+          });
+          window.FB.XFBML.parse();
+        } else {
+          console.error("Facebook SDK not loaded");
+        }
+      };
+      document.body.appendChild(script);
     };
+
+    if (!window.FB) {
+      loadFacebookSDK();
+    } else {
+      window.FB.XFBML.parse();
+    }
   }, []);
 
   return (
@@ -41,12 +42,12 @@ function Facebook() {
             className="fb-page"
             data-href="https://www.facebook.com/feuerwehr.oberbillig/"
             data-tabs="timeline"
-            data-width={width - 100}
+            data-width="500"
             data-height="750"
             data-small-header="false"
             data-adapt-container-width="true"
             data-hide-cover="false"
-            data-show-facepile="false"
+            data-show-facepile="true"
           ></div>
         </div>
       </div>

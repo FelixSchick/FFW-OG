@@ -11,7 +11,7 @@
 
 .navbar--visible {
     background-color: rgba(27, 27, 27, 2);
-    min-height: 10vh;
+    min-height: 14vh;
 }
 
 nav {
@@ -21,18 +21,18 @@ nav {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-nav .name {
-    font-size: 22px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: rgb(171, 37, 36);
+nav .logo img {
+    transition: height 0.75s, margin-bottom 0.75s;
+    margin-bottom: 15px;
+    display: block;
+    height: 12vh;
 }
 
-nav .logo {
-    padding-top: 7px;
-    display: block;
-    width: 22px;
+.navbar--visible .logo img {
+    margin-bottom: 20px;
+    height: 10vh;
 }
+
 
 nav .nav-links {
     display: flex;

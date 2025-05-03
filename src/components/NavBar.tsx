@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { scroller } from "react-scroll/modules";
 import { Link as RouterLink, useNavigate } from "react-router-dom";
 
-import ogLogoImg from "../assets/og-logo.png";
+import fwLogoImg from "../assets/fw-og-logo.png";
 
 function NavBar() {
   const [open, setOpen] = useState(false);
@@ -46,12 +46,8 @@ function NavBar() {
       <nav className={`navbar ${show ? "navbar--visible" : "navbar--hidden"}`}>
         <div className="logo">
           <RouterLink to="/">
-            <img src={ogLogoImg} alt="Logo der Gemeinde Oberbillig" />
+            <img src={fwLogoImg} alt="Logo der Freiwilligen Feuerwehr Oberbillig" />
           </RouterLink>
-        </div>
-        <div className="name">
-          {" "}
-          <a>Feuerwehr Oberbillig</a>{" "}
         </div>
         <ul
           className="nav-links"
