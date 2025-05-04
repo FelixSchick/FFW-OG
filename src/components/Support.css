@@ -2,7 +2,7 @@
 /* Text Styling */
 .support-text h1 {
     font-size: 40px;
-    color: rgb(171, 37, 36);
+    color: rgb(227, 29, 36);
     text-align: center;
 }
 
@@ -45,7 +45,7 @@
 
 .support-become-member button {
     font-size: 18px;
-    color: rgb(171, 37, 36);
+    color: rgb(227, 29, 36);
     font-family: inherit;
     font-weight: 800;
     cursor: pointer;
@@ -77,7 +77,7 @@
     position: absolute;
     width: 0%;
     height: 2px;
-    background-color: rgb(171, 37, 36);
+    background-color: rgb(227, 29, 36);
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
     transition-duration: 400ms;
     transition-property: width, left;
