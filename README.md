@@ -128,7 +128,7 @@ See the [LICENSE](./LICENSE) file for more information.
 ## 📬 Contact
 
 Want to get in touch with the fire department?  
-Visit [https://feuerwehr-oberbillig.de/#kontakt](https://feuerwehr-oberbillig.de/#kontakt)
+Visit [https://feuerwehr-oberbillig.de/#kontakt](https://feuerwehr-oberbillig.de/#kontakt) (feature for this is coming soon)
 
 ---
 
