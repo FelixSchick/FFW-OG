@@ -1,6 +1,7 @@
 import "./App.css";
 
 import Hero from "./components/Hero";
+import OneHundertHero from "./components/special/100Hero";
 import NavBar from "./components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
@@ -12,7 +13,7 @@ function App() {
     <>
       <div className="App">
         <NavBar />
-        <Hero />
+        <OneHundertHero />
       </div>
       <div className="content" id="contentScroll">
         <Routes>
