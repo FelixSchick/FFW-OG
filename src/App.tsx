@@ -1,21 +1,23 @@
 import "./App.css";
 
-import Hero from "./components/Hero";
-import OneHundertHero from "./components/special/100Hero";
 import NavBar from "./components/NavBar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Impressum from "./pages/Impressum";
 import Footer from "./components/Footer";
+import Hero from "./components/Hero";
 
 function App() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <div className="App">
         <NavBar />
-        <OneHundertHero />
+        {isHome && <Hero />}
       </div>
-      <div className="content" id="contentScroll">
+      <div className="content" id="contentScroll">‚
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/impressum" element={<Impressum />} />

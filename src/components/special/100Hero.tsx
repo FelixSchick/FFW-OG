@@ -1,12 +1,9 @@
 import "./100Hero.css";
 
-import { scroller } from "react-scroll/modules";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-scroll";
 import DateRevealFlip from "./DateRevealFlip";
 
 function Hero() {
-  let navigate = useNavigate();
 
 
   return (

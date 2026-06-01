@@ -6,12 +6,18 @@
 
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../../assets/hero.jpg);
 
+
+
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 
   z-index: 1
+}
+
+.hero-date {
+  padding-top: 20px;
 }
 
 .hero-text {
@@ -121,7 +127,7 @@
 
   
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 100‚0px) {
     .hero-image {
       height: 100vh;
       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(../../assets/hero-vertical.jpg);
@@ -130,6 +136,6 @@
 
 @media (max-width: 768px) {
     .hero-date {
-        padding-top: 400px;
+        padding-top: 70px;
     }
 }

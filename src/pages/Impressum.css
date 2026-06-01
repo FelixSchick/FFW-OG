@@ -1,0 +1,97 @@
+.impressum-page {
+  min-height: calc(100vh - 100px);
+  padding: 80px 24px 80px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.impressum-banner {
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.impressum-banner h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.impressum-accent-line {
+  width: 56px;
+  height: 3px;
+  background-color: rgb(227, 29, 36);
+  margin: 14px auto 0;
+}
+
+.impressum-body {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.impressum-section h2 {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgb(227, 29, 36);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 12px;
+}
+
+.impressum-card {
+  background-color: #1b1b1b;
+  border-left: 3px solid rgb(227, 29, 36);
+  border-radius: 2px;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.impressum-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.impressum-card a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.impressum-card a:hover {
+  color: rgb(227, 29, 36);
+}
+
+.impressum-label {
+  display: inline-block;
+  min-width: 76px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+}
+
+.impressum-note {
+  color: rgba(255, 255, 255, 0.4) !important;
+  font-size: 0.875rem !important;
+}
+
+.impressum-back {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.impressum-back a {
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+.impressum-back a:hover {
+  color: rgb(227, 29, 36);
+}

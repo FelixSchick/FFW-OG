@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import { useState, useEffect } from "react";
 import { scroller } from "react-scroll/modules";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
 
 import fwLogoImg from "../assets/fw-og-logo.png";
 
@@ -9,6 +9,8 @@ function NavBar() {
   const [open, setOpen] = useState(false);
   const [checked, setChecked] = useState(false);
   let navigate = useNavigate();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   function refreshPage() {
     window.location.reload();
@@ -43,7 +45,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className={`navbar ${show ? "navbar--visible" : "navbar--hidden"}`}>
+      <nav className={`navbar ${(show || !isHome) ? "navbar--visible" : "navbar--hidden"}`}>
         <div className="logo">
           <RouterLink to="/">
             <img src={fwLogoImg} alt="Logo der Freiwilligen Feuerwehr Oberbillig" />
