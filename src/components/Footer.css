@@ -1,28 +1,121 @@
 .footer-container {
-  width: 100%;
-  background-color: #141414;
-  border-top: 2px solid rgb(227, 29, 36);
-  padding: 24px 16px;
+  background-color: var(--color-bg-deep);
+  border-top: 2px solid var(--color-primary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-bottom: var(--space-md);
+  display: block;
+}
+
+.footer-tagline {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-col-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  margin: 0 0 var(--space-md);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  gap: var(--space-sm);
 }
 
-.footer-container p {
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 0.85rem;
-}
-
-.footer-container a {
+.footer-links li a,
+.footer-links li button {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
-  transition: color 0.2s ease;
-  font-size: 0.85rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-body);
+  transition: color var(--transition-fast);
 }
 
-.footer-container a:hover {
-  color: rgb(227, 29, 36);
+.footer-links li a:hover,
+.footer-links li button:hover {
+  color: var(--color-primary);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-contact-item {
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.footer-contact-item a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-contact-item a:hover {
+  color: var(--color-primary);
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid var(--color-border-subtle);
+  padding: var(--space-md) var(--space-2xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom-bar p,
+.footer-bottom-bar a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  margin: 0;
+}
+
+.footer-bottom-bar a:hover {
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 800px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    padding: var(--space-xl) var(--space-lg);
+    gap: var(--space-lg);
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+    padding: var(--space-md) var(--space-lg);
+  }
 }

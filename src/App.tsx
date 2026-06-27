@@ -13,11 +13,14 @@ function App() {
 
   return (
     <>
+      <a className="skip-link" href="#contentScroll">
+        Zum Hauptinhalt springen
+      </a>
       <div className="App">
         <NavBar />
         {isHome && <Hero />}
       </div>
-      <div className="content" id="contentScroll">‚
+      <div className="content" id="contentScroll">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/impressum" element={<Impressum />} />

@@ -34,9 +34,14 @@ function Facebook() {
   return (
     <React.Fragment>
       <div className="activities" id="fbscroll">
-        <h1>Aktivitäten</h1>
+        <h2 className="section-title">Aktivitäten</h2>
+        <div className="section-title-bar" />
+        <p className="activities-description">
+          Folgen Sie uns auf Facebook, um über aktuelle Einsätze und
+          Veranstaltungen informiert zu bleiben.
+        </p>
         <div className="fb-root"></div>
-        <div className="fb-container">
+        <div className="fb-card">
           <div id="fb-root"></div>
           <div
             className="fb-page"

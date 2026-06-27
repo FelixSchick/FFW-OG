@@ -63,7 +63,7 @@ function NavBar() {
                 setOpen(false);
               }}
             >
-              <a>Home</a>
+              Home
             </RouterLink>
           </li>
           <li>
@@ -89,7 +89,10 @@ function NavBar() {
             </a>
           </li>
         </ul>
-        <label className="burger">
+        <label
+          className="burger"
+          aria-label={open ? "Menü schließen" : "Menü öffnen"}
+        >
           <input
             type="checkbox"
             id="burger"

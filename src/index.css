@@ -12,5 +12,98 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* Colors */
+  --color-primary: rgb(227, 29, 36);
+  --color-primary-glow: rgba(171, 37, 36, 0.4);
+  --color-accent: rgb(4, 156, 220);
+  --color-bg-base: #242424;
+  --color-bg-surface: #1b1b1b;
+  --color-bg-deep: #141414;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-text-muted: rgba(255, 255, 255, 0.65);
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+  --space-2xl: 80px;
+
+  /* Typography */
+  --font-body: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.75rem;
+  --font-size-2xl: 2.5rem;
+
+  /* Motion & Shape */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  --radius-md: 8px;
+  --radius-pill: 34px;
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -120%;
+  left: var(--space-md);
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  z-index: 9999;
+  border-radius: 0 0 2px 2px;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Shared section header utilities */
+.section-title {
+  text-align: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-2xl);
+  font-family: var(--font-heading);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 var(--space-sm);
+}
+
+.section-title-bar {
+  width: 56px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: var(--space-sm) auto var(--space-xl);
+  border-radius: 2px;
+}
